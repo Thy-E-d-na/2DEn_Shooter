@@ -4,7 +4,7 @@ public class BulletScript : MonoBehaviour
 {
     [SerializeField] private float speed = 5f;
     [SerializeField] private float distanceToDestroy = 10f;
-
+    [SerializeField] private int _dmg;
     private void Update()
     {
         transform.Translate(Vector2.up * speed * Time.deltaTime);
@@ -24,7 +24,7 @@ public class BulletScript : MonoBehaviour
     {
         if (other.CompareTag("Boss"))
         {
-            BossScript.Instance.GetShot(10);
+            BossScript.Instance.GetShot(_dmg);
             Destroy(gameObject);
         }
     }

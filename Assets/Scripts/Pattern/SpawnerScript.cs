@@ -71,5 +71,5 @@ public class SpawnerScript : MonoBehaviour
             yield return new WaitForSeconds(Random.Range(0f, 1.5f));
         }
     }
-
+    
 }
